@@ -46,7 +46,7 @@ void main() {
   vec3 ambientTerm = reflectance * Lindirect;
   vec3 diffuseTerm = reflectance * Lsurf;
   vec3 specularTerm = reflectanceWhite * Lsurf * specularstrength;
-  vec3 Lcam = ambientTerm * 0.0 + diffuseTerm + specularTerm;
+  vec3 Lcam = ambientTerm * 0.4 + diffuseTerm + specularTerm;
   // write color to model
   gl_FragColor = vec4(Lcam, 1.0);
 }
